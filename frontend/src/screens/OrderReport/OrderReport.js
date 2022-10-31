@@ -3,13 +3,12 @@ import { useDispatch, useSelector } from 'react-redux'
 import { Table, Button, Form, Row, Col, Container } from 'react-bootstrap'
 import Message from '../../components/Message'
 import Loader from '../../components/Loader'
-import logo from './riverfront.png'
 import { listOrders } from '../../actions/orderAction'
 import { PDFExport, savePDF } from '@progress/kendo-react-pdf';
 
 
 
-const FoodOrderReport = () => {
+const OrderReport = () => {
 
     const dispatch = useDispatch()
 
@@ -50,7 +49,7 @@ const FoodOrderReport = () => {
                     <PDFExport ref={pdfExportComponent} paperSize="A3" margin='100'>
                         <div>
                         <Container className='justify-content-center' style={{ width: '50%' }}>
-                            <img style={{ width: '50px' }} src={logo} className='smallimg'></img>
+                          
                         </Container>
                         <Container style={{ alignItems: 'center' }} >
 
@@ -93,4 +92,4 @@ const FoodOrderReport = () => {
     )
 }
 
-export default FoodOrderReport
+export default OrderReport
